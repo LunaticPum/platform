@@ -1,0 +1,225 @@
+{
+  "main": {
+    "id": "a9a698a1f867cbbd",
+    "type": "split",
+    "children": [
+      {
+        "id": "e1e2e40e7f027962",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "882292daf648a749",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3f2c49a31ac10a77",
+    "type": "split",
+    "children": [
+      {
+        "id": "9e5d453e019a2efa",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "14705e4de01a4cd5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "3aa76f1c9330d485",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "trace",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "e62b5f433591da3c",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 227.7208137512207
+  },
+  "right": {
+    "id": "8629df0b345059f6",
+    "type": "split",
+    "children": [
+      {
+        "id": "e7fc6784b6f79ed3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b94f9f899139538a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "58fa309867e1b095",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "学习/模型后训练.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大纲"
+            }
+          },
+          {
+            "id": "f4f58977d69466a2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "反向链接"
+            }
+          },
+          {
+            "id": "175ed98b1eb05d38",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "出链"
+            }
+          },
+          {
+            "id": "a8236cb0429176a4",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian-git:Open Git source control": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "14705e4de01a4cd5",
+  "lastOpenFiles": [
+    "未命名",
+    "bisheng/bisheng.md",
+    "Bisheng-platform",
+    "bisheng/知识管理平台/知识管理平台.md",
+    "bisheng/知识管理平台/1. OXR 接入.md",
+    "学习/模型后训练.md",
+    "bisheng/知识管理平台/OXR 接入",
+    "bisheng/知识管理平台",
+    "杂项/Pasted image 20261013161906.png",
+    "杂项/Pasted image 20261020144327.png",
+    "杂项/Pasted image 20261020161802.png",
+    "杂项",
+    "中免项目/Bisheng 开发日志/彭嘉澎-简历-v2(1).pdf",
+    "学习/Google-harness2.md",
+    "学习/2610.14224v1.learn.pdf",
+    "学习/2610.14224v1test.pdf",
+    "学习/2610.14224v1.pdf",
+    "学习/_h2_chunks/ap4.txt",
+    "学习/_h2_chunks/ap3.txt",
+    "bisheng/docs/langchain-1x-upgrade.md",
+    "RPent/Harness-VLA.md",
+    "bisheng/docs/SDD-Guide.md",
+    "bisheng/docs/constitution.md",
+    "学习/理解 Transformer.md",
+    "学习/Learning.md",
+    "bisheng/docs/api/filelib-retrieve.md",
+    "中免项目/方案文档/ROBOT_API_HANDOFF.md",
+    "bisheng/docs/PRD/2.6 灵思 deepagents 迁移 PRD/灵思 Linsight 迁移 deepagents 框架 PRD.md",
+    "bisheng/docs/blog/企业权限体系设计的前世今生.md",
+    "bisheng/docs/architecture/10-permission-rbac.md",
+    "bisheng/docs/architecture/11-gateway.md",
+    "bisheng/docs/architecture/12-multi-tenant.md",
+    "bisheng/docs/architecture/05-linsight-agent.md",
+    "bisheng/docs/architecture/04-knowledge-rag.md",
+    "bisheng/docs/architecture/03-workflow-engine.md",
+    "bisheng/docs/architecture/02-backend-modules.md",
+    "bisheng/docs/architecture/01-architecture-overview.md",
+    "bisheng/docs/architecture/13-cursor-pagination.md",
+    "bisheng/docs/architecture/07-data-models.md"
+  ]
+}
