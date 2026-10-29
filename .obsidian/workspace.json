@@ -11,10 +11,14 @@
             "id": "882292daf648a749",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Bisheng-platform/test.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "test"
             }
           }
         ]
@@ -110,7 +114,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "学习/模型后训练.md",
+                "file": "Bisheng-platform/test.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -125,6 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Bisheng-platform/test.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,6 +148,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Bisheng-platform/test.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -182,44 +188,43 @@
   },
   "active": "14705e4de01a4cd5",
   "lastOpenFiles": [
-    "未命名",
-    "bisheng/bisheng.md",
+    "归档",
+    "Bisheng-platform/test.md",
+    "归档/bisheng/bisheng.md",
     "Bisheng-platform",
-    "bisheng/知识管理平台/知识管理平台.md",
-    "bisheng/知识管理平台/1. OXR 接入.md",
-    "学习/模型后训练.md",
-    "bisheng/知识管理平台/OXR 接入",
-    "bisheng/知识管理平台",
+    "归档/bisheng/知识管理平台/知识管理平台.md",
+    "归档/bisheng/知识管理平台/1. OXR 接入.md",
+    "归档/学习/模型后训练.md",
+    "归档/bisheng/知识管理平台/OXR 接入",
+    "归档/bisheng/知识管理平台",
     "杂项/Pasted image 20261013161906.png",
     "杂项/Pasted image 20261020144327.png",
     "杂项/Pasted image 20261020161802.png",
     "杂项",
     "中免项目/Bisheng 开发日志/彭嘉澎-简历-v2(1).pdf",
-    "学习/Google-harness2.md",
-    "学习/2610.14224v1.learn.pdf",
-    "学习/2610.14224v1test.pdf",
-    "学习/2610.14224v1.pdf",
+    "归档/学习/Google-harness2.md",
+    "归档/学习/2610.14224v1.learn.pdf",
+    "归档/学习/2610.14224v1test.pdf",
+    "归档/学习/2610.14224v1.pdf",
     "学习/_h2_chunks/ap4.txt",
-    "学习/_h2_chunks/ap3.txt",
-    "bisheng/docs/langchain-1x-upgrade.md",
-    "RPent/Harness-VLA.md",
-    "bisheng/docs/SDD-Guide.md",
-    "bisheng/docs/constitution.md",
+    "归档/bisheng/docs/langchain-1x-upgrade.md",
+    "归档/RPent/Harness-VLA.md",
+    "归档/bisheng/docs/SDD-Guide.md",
+    "归档/bisheng/docs/constitution.md",
     "学习/理解 Transformer.md",
     "学习/Learning.md",
-    "bisheng/docs/api/filelib-retrieve.md",
+    "归档/bisheng/docs/api/filelib-retrieve.md",
     "中免项目/方案文档/ROBOT_API_HANDOFF.md",
-    "bisheng/docs/PRD/2.6 灵思 deepagents 迁移 PRD/灵思 Linsight 迁移 deepagents 框架 PRD.md",
-    "bisheng/docs/blog/企业权限体系设计的前世今生.md",
-    "bisheng/docs/architecture/10-permission-rbac.md",
-    "bisheng/docs/architecture/11-gateway.md",
-    "bisheng/docs/architecture/12-multi-tenant.md",
-    "bisheng/docs/architecture/05-linsight-agent.md",
-    "bisheng/docs/architecture/04-knowledge-rag.md",
-    "bisheng/docs/architecture/03-workflow-engine.md",
-    "bisheng/docs/architecture/02-backend-modules.md",
-    "bisheng/docs/architecture/01-architecture-overview.md",
-    "bisheng/docs/architecture/13-cursor-pagination.md",
-    "bisheng/docs/architecture/07-data-models.md"
+    "归档/bisheng/docs/PRD/2.6 灵思 deepagents 迁移 PRD/灵思 Linsight 迁移 deepagents 框架 PRD.md",
+    "归档/bisheng/docs/blog/企业权限体系设计的前世今生.md",
+    "归档/bisheng/docs/architecture/10-permission-rbac.md",
+    "归档/bisheng/docs/architecture/11-gateway.md",
+    "归档/bisheng/docs/architecture/12-multi-tenant.md",
+    "归档/bisheng/docs/architecture/05-linsight-agent.md",
+    "归档/bisheng/docs/architecture/04-knowledge-rag.md",
+    "归档/bisheng/docs/architecture/03-workflow-engine.md",
+    "归档/bisheng/docs/architecture/02-backend-modules.md",
+    "归档/bisheng/docs/architecture/01-architecture-overview.md",
+    "归档/bisheng/docs/architecture/13-cursor-pagination.md"
   ]
 }

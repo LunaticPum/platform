@@ -8,5 +8,6 @@
     "margin": "0",
     "downscalePercent": 100
   },
-  "attachmentFolderPath": "杂项"
+  "attachmentFolderPath": "杂项",
+  "alwaysUpdateLinks": true
 }
