@@ -11,10 +11,14 @@
             "id": "c2ca4e7b1b2784a7",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Bisheng-platform/knowledge/架构设计.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "架构设计"
             }
           }
         ]
@@ -195,6 +199,19 @@
   },
   "active": "c2ca4e7b1b2784a7",
   "lastOpenFiles": [
+    "Bisheng-platform/knowledge/pics/KnowledgeFence决策流.png",
+    "Bisheng-platform/knowledge/pics/分层与请求数据流.png",
+    "Bisheng-platform/knowledge/pics/KnowledgeFence决策流.drawio",
+    "Bisheng-platform/knowledge/pics/分层与请求数据流.drawio",
+    "Bisheng-platform/knowledge/feature/v0.1.0/03_运行状态与日志.md",
+    "Bisheng-platform/knowledge/feature/v0.1.0/02_ORM与Alembic接入.md",
+    "Bisheng-platform/knowledge/feature/v0.1.0/01_基础设施配置.md",
+    "Bisheng-platform/knowledge/feature/v0.1.0",
+    "Bisheng-platform/knowledge/feature",
+    "Bisheng-platform/knowledge/261029 开发约定.md",
+    "Bisheng-platform/knowledge/业务设计/整体架构.md",
+    "Bisheng-platform/knowledge/业务设计/公共业务请求边界.md",
+    "Bisheng-platform/knowledge/业务设计",
     "Bisheng-platform/knowledge/pics/向量存储.drawio",
     "Bisheng-platform/knowledge/pics/库表设计.drawio",
     "Bisheng-platform/knowledge/pics/系统设计.drawio",
@@ -206,17 +223,11 @@
     "Bisheng-platform/knowledge/ddd-easy-guide-03-04.png",
     "Bisheng-platform/knowledge/未确认 12642.crdownload",
     "Bisheng-platform/knowledge/架构设计.md",
-    "Bisheng-platform/knowledge/pics/领域划分.drawio",
     "Bisheng-platform/knowledge/pics/知识库ORM.png",
     "Bisheng-platform/knowledge/pics/领域划分.png",
-    "Bisheng-platform/knowledge/pics/知识库ORM.drawio",
-    "Bisheng-platform/knowledge/pics",
-    "Bisheng-platform/knowledge",
     "归档/images/Pasted image 20261020161802.png",
-    "归档/images",
     "归档/images/Pasted image 20261013161906.png",
     "README.md",
-    "杂项/drawio/租户隔离与权限校验-时序图.png",
     "Bisheng-platform/test.md",
     "归档/bisheng/bisheng.md",
     "归档/bisheng/知识管理平台/知识管理平台.md",
@@ -233,12 +244,6 @@
     "中免项目/方案文档/ROBOT_API_HANDOFF.md",
     "归档/bisheng/docs/PRD/2.6 灵思 deepagents 迁移 PRD/灵思 Linsight 迁移 deepagents 框架 PRD.md",
     "归档/bisheng/docs/blog/企业权限体系设计的前世今生.md",
-    "归档/bisheng/docs/architecture/10-permission-rbac.md",
-    "归档/bisheng/docs/architecture/11-gateway.md",
-    "归档/bisheng/docs/architecture/12-multi-tenant.md",
-    "归档/bisheng/docs/architecture/05-linsight-agent.md",
-    "归档/bisheng/docs/architecture/04-knowledge-rag.md",
-    "归档/bisheng/docs/architecture/03-workflow-engine.md",
-    "归档/bisheng/docs/architecture/02-backend-modules.md"
+    "归档/bisheng/docs/architecture/10-permission-rbac.md"
   ]
 }

@@ -1,0 +1,103 @@
+<mxfile host="Electron" agent="Composer">
+  <diagram id="layer-flow" name="分层与请求数据流">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="780" math="0" shadow="0" adaptiveColors="auto">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" parent="1" style="text;html=1;fontSize=20;fontStyle=1;align=left;fontColor=#0F172A;" value="分层与请求数据流" vertex="1">
+          <mxGeometry x="40" y="20" width="280" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" parent="1" style="text;html=1;fontSize=11;align=left;fontColor=#64748B;" value="API DTO → Fence → Service → Repo/ORM / 外部能力 → 业务结果 → Response DTO；ORM 不出 Service，Celery 只带标识" vertex="1">
+          <mxGeometry x="40" y="48" width="720" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="lane_layers" parent="1" style="swimlane;horizontal=0;startSize=28;fillColor=#F8FAFC;strokeColor=#1E3A8A;strokeWidth=2;fontColor=#1E3A8A;fontStyle=1;fontSize=12;html=1;" value="分层" vertex="1">
+          <mxGeometry x="40" y="90" width="200" height="620" as="geometry" />
+        </mxCell>
+        <mxCell id="l_api" parent="lane_layers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#1E3A8A;strokeWidth=1;fontColor=#1E3A8A;fontSize=12;fontStyle=1;align=center;" value="api&lt;br&gt;&lt;font style=&quot;font-size:10px;font-weight:normal;&quot;&gt;路由 · DTO · Fence · 响应&lt;/font&gt;" vertex="1">
+          <mxGeometry x="40" y="20" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="l_types" parent="lane_layers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0F2FE;strokeColor=#0369A1;strokeWidth=1;fontColor=#0C4A6E;fontSize=12;fontStyle=1;align=center;" value="types&lt;br&gt;&lt;font style=&quot;font-size:10px;font-weight:normal;&quot;&gt;请求/响应契约&lt;/font&gt;" vertex="1">
+          <mxGeometry x="40" y="105" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l_service" parent="lane_layers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#1E3A8A;strokeWidth=1;fontColor=#1E3A8A;fontSize=12;fontStyle=1;align=center;" value="service&lt;br&gt;&lt;font style=&quot;font-size:10px;font-weight:normal;&quot;&gt;用例编排 · 事务边界&lt;/font&gt;" vertex="1">
+          <mxGeometry x="40" y="185" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="l_domain" parent="lane_layers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=#166534;strokeWidth=1;fontColor=#14532D;fontSize=12;fontStyle=1;align=center;" value="domain&lt;br&gt;&lt;font style=&quot;font-size:10px;font-weight:normal;&quot;&gt;规则 · 枚举 · 状态&lt;/font&gt;" vertex="1">
+          <mxGeometry x="40" y="275" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="l_infra" parent="lane_layers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEDD5;strokeColor=#C2410C;strokeWidth=1;fontColor=#9A3412;fontSize=12;fontStyle=1;align=center;" value="infrastructure&lt;br&gt;&lt;font style=&quot;font-size:10px;font-weight:normal;&quot;&gt;Repo · 存储 · 索引 · 模型客户端&lt;/font&gt;" vertex="1">
+          <mxGeometry x="40" y="365" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="l_app" parent="lane_layers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#475569;strokeWidth=1;fontColor=#334155;fontSize=12;fontStyle=1;align=center;" value="app&lt;br&gt;&lt;font style=&quot;font-size:10px;font-weight:normal;&quot;&gt;装配 · lifespan · Celery&lt;/font&gt;" vertex="1">
+          <mxGeometry x="40" y="470" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="l_note" parent="lane_layers" style="text;html=1;fontSize=10;align=left;fontColor=#64748B;whiteSpace=wrap;" value="ORM 定义可暂放 domain；本质是持久化映射" vertex="1">
+          <mxGeometry x="36" y="555" width="148" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="lane_flow" parent="1" style="swimlane;horizontal=0;startSize=28;fillColor=#F8FAFC;strokeColor=#1E3A8A;strokeWidth=2;fontColor=#1E3A8A;fontStyle=1;fontSize=12;html=1;" value="一次 HTTP 用例的数据传递" vertex="1">
+          <mxGeometry x="280" y="90" width="520" height="620" as="geometry" />
+        </mxCell>
+
+        <mxCell id="f1" parent="lane_flow" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;strokeWidth=1;fontColor=#9A3412;fontSize=12;fontStyle=1;align=center;" value="HTTP 请求&lt;br&gt;&lt;font style=&quot;font-size:10px;font-weight:normal;&quot;&gt;身份凭证头 · X-Trace-ID&lt;/font&gt;" vertex="1">
+          <mxGeometry x="150" y="30" width="220" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="f2" parent="lane_flow" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#1E3A8A;strokeWidth=1;fontColor=#1E3A8A;fontSize=12;fontStyle=1;align=center;" value="API：解析 Request DTO&lt;br&gt;&lt;font style=&quot;font-size:10px;font-weight:normal;&quot;&gt;取得 IdentityContext&lt;/font&gt;" vertex="1">
+          <mxGeometry x="150" y="110" width="220" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="f3" parent="lane_flow" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1;fontColor=#5B21B6;fontSize=12;fontStyle=1;align=center;" value="KnowledgeFence&lt;br&gt;&lt;font style=&quot;font-size:10px;font-weight:normal;&quot;&gt;凭证 · 本地资源 · 按需 Check&lt;/font&gt;" vertex="1">
+          <mxGeometry x="150" y="190" width="220" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="f4" parent="lane_flow" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#1E3A8A;strokeWidth=1;fontColor=#1E3A8A;fontSize=12;fontStyle=1;align=center;" value="Service：业务参数 + 领域规则&lt;br&gt;&lt;font style=&quot;font-size:10px;font-weight:normal;&quot;&gt;不接收 Request / UploadFile&lt;/font&gt;" vertex="1">
+          <mxGeometry x="150" y="270" width="220" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="f5" parent="lane_flow" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEDD5;strokeColor=#C2410C;strokeWidth=1;fontColor=#9A3412;fontSize=12;fontStyle=1;align=center;" value="Repository / DAO ↔ ORM&lt;br&gt;&lt;font style=&quot;font-size:10px;font-weight:normal;&quot;&gt;Session 在 Service 事务内&lt;/font&gt;" vertex="1">
+          <mxGeometry x="40" y="360" width="200" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="f6" parent="lane_flow" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEDD5;strokeColor=#C2410C;strokeWidth=1;fontColor=#9A3412;fontSize=12;fontStyle=1;align=center;" value="外部能力&lt;br&gt;&lt;font style=&quot;font-size:10px;font-weight:normal;&quot;&gt;MinIO · Celery · ES · Milvus · 模型&lt;/font&gt;" vertex="1">
+          <mxGeometry x="280" y="360" width="200" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="f7" parent="lane_flow" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=#166534;strokeWidth=1;fontColor=#14532D;fontSize=12;fontStyle=1;align=center;" value="Service 业务结果 / 视图数据" vertex="1">
+          <mxGeometry x="150" y="450" width="220" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="f8" parent="lane_flow" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#1E3A8A;strokeWidth=1;fontColor=#1E3A8A;fontSize=12;fontStyle=1;align=center;" value="API → Response DTO / ApiResponse&lt;br&gt;&lt;font style=&quot;font-size:10px;font-weight:normal;&quot;&gt;统一错误映射 · 凭据脱敏&lt;/font&gt;" vertex="1">
+          <mxGeometry x="150" y="530" width="220" height="54" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e1" parent="lane_flow" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1E3A8A;strokeWidth=1;endArrow=block;endFill=1;" edge="1" source="f1" target="f2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" parent="lane_flow" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1E3A8A;strokeWidth=1;endArrow=block;endFill=1;" edge="1" source="f2" target="f3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" parent="lane_flow" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1E3A8A;strokeWidth=1;endArrow=block;endFill=1;" edge="1" source="f3" target="f4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" parent="lane_flow" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1E3A8A;strokeWidth=1;endArrow=block;endFill=1;" edge="1" source="f4" target="f5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" parent="lane_flow" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1E3A8A;strokeWidth=1;endArrow=block;endFill=1;" edge="1" source="f4" target="f6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" parent="lane_flow" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#166534;strokeWidth=1;endArrow=block;endFill=1;" edge="1" source="f5" target="f7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" parent="lane_flow" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#166534;strokeWidth=1;endArrow=block;endFill=1;" edge="1" source="f6" target="f7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" parent="lane_flow" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1E3A8A;strokeWidth=1;endArrow=block;endFill=1;" edge="1" source="f7" target="f8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="note_box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF7ED;strokeColor=#C2410C;strokeWidth=1;fontColor=#9A3412;fontSize=11;align=left;spacingLeft=10;spacingRight=8;spacingTop=6;" value="&lt;b&gt;边界约束&lt;/b&gt;&lt;br&gt;· ORM / Session 不越过 Service&lt;br&gt;· 不进入 HTTP 响应或 Celery 消息&lt;br&gt;· Celery 只带 file_id / library_id /&lt;br&gt;&amp;nbsp;&amp;nbsp;tenant_id / trace_id 等标识&lt;br&gt;· Worker 重读 ORM 并校验租户关系&lt;br&gt;· MySQL 与 MinIO/ES/Milvus 非同一事务" vertex="1">
+          <mxGeometry x="840" y="90" width="260" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="map_box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0FDF4;strokeColor=#166534;strokeWidth=1;fontColor=#14532D;fontSize=11;align=left;spacingLeft=10;spacingRight=8;spacingTop=6;" value="&lt;b&gt;类型转换&lt;/b&gt;&lt;br&gt;Request DTO&lt;br&gt;→ Service 参数 + Identity&lt;br&gt;→ Repo/DAO → ORM&lt;br&gt;&lt;br&gt;ORM / 外部结果&lt;br&gt;→ Service 业务结果&lt;br&gt;→ Response DTO → HTTP" vertex="1">
+          <mxGeometry x="840" y="320" width="260" height="200" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
