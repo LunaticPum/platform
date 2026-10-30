@@ -1,0 +1,123 @@
+<mxfile host="Electron" agent="Composer">
+  <diagram id="fence-flow" name="KnowledgeFence决策流">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="900" math="0" shadow="0" adaptiveColors="auto">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" parent="1" style="text;html=1;fontSize=20;fontStyle=1;align=left;fontColor=#0F172A;" value="KnowledgeFence 决策流" vertex="1">
+          <mxGeometry x="40" y="20" width="320" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" parent="1" style="text;html=1;fontSize=11;align=left;fontColor=#64748B;" value="凭证校验 → IdentityContext → 本地资源事实 → access_mode 决策 → 按需外部 Check；ALLOW 后才进入业务 Service" vertex="1">
+          <mxGeometry x="40" y="48" width="780" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;strokeWidth=1;fontColor=#9A3412;fontSize=12;fontStyle=1;align=center;" value="HTTP 请求&lt;br&gt;&lt;font style=&quot;font-size:10px;font-weight:normal;&quot;&gt;身份凭证 Header · Trace&lt;/font&gt;" vertex="1">
+          <mxGeometry x="360" y="90" width="200" height="54" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1;fontColor=#5B21B6;fontSize=12;fontStyle=1;align=center;" value="CredentialValidator&lt;br&gt;&lt;font style=&quot;font-size:10px;font-weight:normal;&quot;&gt;校验签发方凭证&lt;/font&gt;" vertex="1">
+          <mxGeometry x="360" y="170" width="200" height="54" as="geometry" />
+        </mxCell>
+
+        <mxCell id="d1" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1;fontColor=#854D0E;fontSize=12;fontStyle=1;align=center;" value="凭证有效？" vertex="1">
+          <mxGeometry x="370" y="250" width="180" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="err1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;strokeWidth=1;fontColor=#7F1D1D;fontSize=11;fontStyle=1;align=center;" value="CredentialInvalidError&lt;br&gt;&lt;font style=&quot;font-size:10px;font-weight:normal;&quot;&gt;401 · 不查资源 · 不调 Service&lt;/font&gt;" vertex="1">
+          <mxGeometry x="640" y="260" width="220" height="54" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#1E3A8A;strokeWidth=1;fontColor=#1E3A8A;fontSize=12;fontStyle=1;align=center;" value="IdentityContext&lt;br&gt;&lt;font style=&quot;font-size:10px;font-weight:normal;&quot;&gt;tenant_id · subject_id&lt;/font&gt;" vertex="1">
+          <mxGeometry x="360" y="360" width="200" height="54" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEDD5;strokeColor=#C2410C;strokeWidth=1;fontColor=#9A3412;fontSize=12;fontStyle=1;align=center;" value="读本地资源事实&lt;br&gt;&lt;font style=&quot;font-size:10px;font-weight:normal;&quot;&gt;tenant_id · state · access_mode&lt;/font&gt;" vertex="1">
+          <mxGeometry x="360" y="440" width="200" height="54" as="geometry" />
+        </mxCell>
+
+        <mxCell id="d2" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1;fontColor=#854D0E;fontSize=12;fontStyle=1;align=center;" value="存在且同租户？" vertex="1">
+          <mxGeometry x="360" y="520" width="200" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="err2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;strokeWidth=1;fontColor=#7F1D1D;fontSize=11;fontStyle=1;align=center;" value="NotExist / TenantMismatch&lt;br&gt;&lt;font style=&quot;font-size:10px;font-weight:normal;&quot;&gt;404/403 · 不调外部 Check&lt;/font&gt;" vertex="1">
+          <mxGeometry x="640" y="530" width="220" height="54" as="geometry" />
+        </mxCell>
+
+        <mxCell id="d3" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1;fontColor=#854D0E;fontSize=12;fontStyle=1;align=center;" value="可直接放行？" vertex="1">
+          <mxGeometry x="360" y="630" width="200" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="note_direct" parent="1" style="text;html=1;fontSize=10;align=left;fontColor=#64748B;" value="tenant_public + 同租户只读查看" vertex="1">
+          <mxGeometry x="120" y="650" width="200" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1;fontColor=#5B21B6;fontSize=12;fontStyle=1;align=center;" value="AuthorizationClient Check&lt;br&gt;&lt;font style=&quot;font-size:10px;font-weight:normal;&quot;&gt;主体 · 动作 · 资源引用&lt;/font&gt;" vertex="1">
+          <mxGeometry x="640" y="640" width="220" height="54" as="geometry" />
+        </mxCell>
+
+        <mxCell id="d4" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1;fontColor=#854D0E;fontSize=12;fontStyle=1;align=center;" value="Check 结果？" vertex="1">
+          <mxGeometry x="650" y="730" width="200" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ok" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=#166534;strokeWidth=2;fontColor=#14532D;fontSize=13;fontStyle=1;align=center;" value="业务 Service / 用例&lt;br&gt;&lt;font style=&quot;font-size:10px;font-weight:normal;&quot;&gt;领域关联与模型类型仍由 Service 校验&lt;/font&gt;" vertex="1">
+          <mxGeometry x="350" y="840" width="220" height="54" as="geometry" />
+        </mxCell>
+
+        <mxCell id="err3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;strokeWidth=1;fontColor=#7F1D1D;fontSize=11;fontStyle=1;align=center;" value="PermissionDeniedError&lt;br&gt;&lt;font style=&quot;font-size:10px;font-weight:normal;&quot;&gt;403 · DENY&lt;/font&gt;" vertex="1">
+          <mxGeometry x="900" y="720" width="160" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="err4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;strokeWidth=1;fontColor=#7F1D1D;fontSize=11;fontStyle=1;align=center;" value="PermissionUnavailable&lt;br&gt;&lt;font style=&quot;font-size:10px;font-weight:normal;&quot;&gt;503 · 失败关闭&lt;/font&gt;" vertex="1">
+          <mxGeometry x="900" y="790" width="160" height="48" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#1E3A8A;strokeWidth=1;fontColor=#334155;fontSize=11;align=left;spacingLeft=10;spacingTop=6;" value="&lt;b&gt;说明&lt;/b&gt;&lt;br&gt;· 身份认证 ≠ 资源授权&lt;br&gt;· restricted：受保护操作均 Check&lt;br&gt;· tenant_public：明确只读可直放&lt;br&gt;· 未列出操作默认 Check&lt;br&gt;· 生产不可静默放行&lt;br&gt;· 测试注入 fake，非默认 mock" vertex="1">
+          <mxGeometry x="40" y="90" width="240" height="160" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1E3A8A;strokeWidth=1;endArrow=block;endFill=1;" edge="1" source="s1" target="s2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1E3A8A;strokeWidth=1;endArrow=block;endFill=1;" edge="1" source="s2" target="d1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#B85450;strokeWidth=1;endArrow=block;endFill=1;fontColor=#B20000;fontSize=11;" edge="1" source="d1" target="err1" value="否">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2D7600;strokeWidth=1;endArrow=block;endFill=1;fontColor=#2D7600;fontSize=11;" edge="1" source="d1" target="s3" value="是">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1E3A8A;strokeWidth=1;endArrow=block;endFill=1;" edge="1" source="s3" target="s4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1E3A8A;strokeWidth=1;endArrow=block;endFill=1;" edge="1" source="s4" target="d2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#B85450;strokeWidth=1;endArrow=block;endFill=1;fontColor=#B20000;fontSize=11;" edge="1" source="d2" target="err2" value="否">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2D7600;strokeWidth=1;endArrow=block;endFill=1;fontColor=#2D7600;fontSize=11;" edge="1" source="d2" target="d3" value="是">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2D7600;strokeWidth=1;endArrow=block;endFill=1;fontColor=#2D7600;fontSize=11;" edge="1" source="d3" target="ok" value="是">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1E3A8A;strokeWidth=1;endArrow=block;endFill=1;fontColor=#854D0E;fontSize=11;" edge="1" source="d3" target="s5" value="否">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1E3A8A;strokeWidth=1;endArrow=block;endFill=1;" edge="1" source="s5" target="d4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2D7600;strokeWidth=1;endArrow=block;endFill=1;fontColor=#2D7600;fontSize=11;" edge="1" source="d4" target="ok" value="ALLOW">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#B85450;strokeWidth=1;endArrow=block;endFill=1;fontColor=#B20000;fontSize=11;" edge="1" source="d4" target="err3" value="DENY">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#B85450;strokeWidth=1;endArrow=block;endFill=1;fontColor=#B20000;fontSize=11;" edge="1" source="d4" target="err4" value="不可用">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
